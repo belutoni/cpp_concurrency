@@ -12,7 +12,7 @@ concept JoinableThread = requires(T thread)
 {
     { thread.join() }       -> std::same_as<void>;
     { thread.detach() }     -> std::same_as<void>;
-    { thread.joinable() }   -> std::same_as<void>;
+    { thread.joinable() }   -> std::same_as<bool>;
 };
 
 template <JoinableThread ThreadType>
