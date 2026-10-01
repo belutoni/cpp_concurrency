@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(cpp_concurrency main.cpp
         thread_guard.h
+        scoped_thread.h
+        scoped_thread.h
 )
