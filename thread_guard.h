@@ -5,15 +5,7 @@
 #ifndef CPP_CONCURRENCY_THREAD_GUARD_H
 #define CPP_CONCURRENCY_THREAD_GUARD_H
 
-#include <concepts>
-
-template <typename T>
-concept JoinableThread = requires(T thread)
-{
-    { thread.join() }       -> std::same_as<void>;
-    { thread.detach() }     -> std::same_as<void>;
-    { thread.joinable() }   -> std::same_as<bool>;
-};
+#include "concurrency_concepts.h"
 
 template <JoinableThread ThreadType>
 class thread_guard {
