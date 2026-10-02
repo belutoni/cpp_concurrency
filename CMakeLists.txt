@@ -8,4 +8,6 @@ add_executable(cpp_concurrency main.cpp
         scoped_thread.h
         scoped_thread.h
         lock_guard.h
+        scoped_lock.h
+        shared_lock.h
 )

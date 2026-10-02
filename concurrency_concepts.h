@@ -23,4 +23,11 @@ concept Lockable = requires(T mutex)
     { mutex.try_lock() }    -> std::same_as<bool>;
 };
 
+template <typename T>
+concept SharedLockable = requires(T smutex)
+{
+    { smutex.lock_shared() }    -> std::same_as<void>;
+    { smutex.unlock_shared() }  -> std::same_as<void>;
+};
+
 #endif //CPP_CONCURRENCY_CONCURRENCY_CONCEPTS_H
