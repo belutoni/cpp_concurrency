@@ -10,4 +10,6 @@ add_executable(cpp_concurrency main.cpp
         lock_guard.h
         scoped_lock.h
         shared_lock.h
+        spinlock_mutex.h
+        spinlock_mutex.h
 )
