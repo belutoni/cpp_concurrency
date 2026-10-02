@@ -20,7 +20,6 @@ concept Lockable = requires(T mutex)
 {
     { mutex.lock() }        -> std::same_as<void>;
     { mutex.unlock() }      -> std::same_as<void>;
-    { mutex.try_lock() }    -> std::same_as<bool>;
 };
 
 template <typename T>
